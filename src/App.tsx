@@ -1,13 +1,26 @@
-import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import RootLayout from "./pages/Root";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <HomePage />, errorElement: <NotFoundPage /> },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+        errorElement: <NotFoundPage />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold text-center text-blue-500">
-        Spectrum Gallery
-      </h1>
-    </>
-  );
+  return <RouterProvider router={router}></RouterProvider>;
 }
 
 export default App;
