@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./FeaturesBanner.css";
+import "./CometFeaturesBanner.css";
 
 export type CometFeaturesBannerProps = {
   theme?: string;
@@ -32,7 +32,7 @@ export default function CometFeaturesBanner({
   }, []);
 
   return (
-    <div className="FeaturesBanner">
+    <div className="CometFeaturesBanner">
       <comet-features-banner
         className="CometFeaturesBanner"
         theme={theme}
