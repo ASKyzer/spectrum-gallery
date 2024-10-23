@@ -1,20 +1,23 @@
-import Hero from "../components/Hero";
+import FeaturesBanner from "../components/comet/features-banner/FeaturesBanner";
+import PageHeader from "../components/ui/PageHeader";
+import { HOME_PAGE_MAIN_FEATURES_BANNER_DATA } from "../constants/features-banner";
 
 export default function HomePage() {
-  const heroData = {
-    title: "Explore Stunning Photography",
+  const HOME_PAGE_HEADER_DATA = {
+    title: "Welcome to InsureGuard: Your Trusted Insurance Partner",
     description:
-      "Discover a breathtaking collection of amazing photographs from world-renowned photographers, featuring a vast array of categories. From landscapes and portraits to wildlife and architecture, immerse yourself in visual stories that capture the essence of the world.",
-    buttonText: "Start Exploring",
-  };
-
-  const handleButtonClick = () => {
-    console.log("Button clicked");
+      "Discover our comprehensive risk analysis tool that empowers you to make informed decisions and find the perfect policy tailored to your unique needs.",
+    classNames: "my-10",
   };
 
   return (
     <>
-      <Hero {...heroData} onButtonClick={handleButtonClick} />
+      <div className="">
+        <div className="mt-4 mb-10">
+          <PageHeader {...HOME_PAGE_HEADER_DATA} />
+        </div>
+        <FeaturesBanner {...HOME_PAGE_MAIN_FEATURES_BANNER_DATA} />
+      </div>
     </>
   );
 }
