@@ -1,9 +1,9 @@
 import "@frigi/comet/dist/comet.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import RootLayout from "./pages/Root";
+import SupportPage from "./pages/SupportPage";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +12,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage />, errorElement: <NotFoundPage /> },
       {
-        path: "/contact",
-        element: <ContactPage />,
+        path: "/support",
+        element: <SupportPage />,
         errorElement: <NotFoundPage />,
       },
     ],

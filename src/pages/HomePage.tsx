@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import CometFeaturesBanner from "../components/comet/features-banner/CometFeaturesBanner";
 import DashboardSectionTitle from "../components/common/DashboardSectionTitle";
 import FeaturedCarriers from "../components/sections/FeaturedCarriers";
@@ -10,6 +11,8 @@ import {
 import { SALES_SUMMARY_DATA } from "../constants/sales-summary";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   const HOME_PAGE_HEADER_DATA = {
     title: "Welcome to InsureGuard: Your Trusted Insurance Partner",
     description:
@@ -30,7 +33,7 @@ export default function HomePage() {
   };
 
   const handleSecondaryFeatureButtonClick = () => {
-    console.log("Secondary feature button clicked");
+    navigate("/support");
   };
 
   return (

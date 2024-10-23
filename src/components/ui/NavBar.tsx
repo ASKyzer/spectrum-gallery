@@ -1,18 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <div className="flex justify-between items-center h-16 px-4 bg-white border-b border-gray-200 shadow-sm">
-      <h1 className="text-3xl font-bold text-gray-600">
+      <h1 className="text-3xl font-bold text-[--primary-50]">
         <Link to="/">InsureGuard</Link>
       </h1>
       <nav className="flex items-center gap-4 text-lg font-semibold text-gray-600 mr-10">
         <ul className="flex items-center gap-4">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `hover:text-[--primary-50] ${
+                  isActive ? "text-[--primary-50]" : "text-[--primary-80]"
+                }`
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink
+              to="/support"
+              className={({ isActive }) =>
+                `hover:text-[--primary-50] ${
+                  isActive ? "text-[--primary-50]" : "text-[--primary-80]"
+                }`
+              }
+            >
+              Support
+            </NavLink>
           </li>
         </ul>
       </nav>
