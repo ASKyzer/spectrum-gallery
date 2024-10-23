@@ -10,13 +10,21 @@ export default function HomePage() {
     classNames: "my-10",
   };
 
+  const handleFeatureBannerButtonClick = () => {
+    console.log("Feature banner button clicked");
+    // TODO: Navigate to the customers list page.
+  };
+
   return (
     <>
       <div className="">
         <div className="mt-4 mb-10">
           <PageHeader {...HOME_PAGE_HEADER_DATA} />
         </div>
-        <FeaturesBanner {...HOME_PAGE_MAIN_FEATURES_BANNER_DATA} />
+        <FeaturesBanner
+          {...HOME_PAGE_MAIN_FEATURES_BANNER_DATA}
+          onClick={handleFeatureBannerButtonClick}
+        />
       </div>
     </>
   );
