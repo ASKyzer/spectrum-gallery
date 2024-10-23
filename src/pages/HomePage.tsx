@@ -3,7 +3,10 @@ import DashboardSectionTitle from "../components/common/DashboardSectionTitle";
 import FeaturedCarriers from "../components/sections/FeaturedCarriers";
 import SalesSummary from "../components/sections/SalesSummary";
 import PageHeader from "../components/ui/PageHeader";
-import { HOME_PAGE_MAIN_FEATURES_BANNER_DATA } from "../constants/features-banner";
+import {
+  HOME_PAGE_MAIN_FEATURES_BANNER_DATA,
+  HOME_PAGE_SECONDARY_FEATURES_BANNER_DATA,
+} from "../constants/features-banner";
 import { SALES_SUMMARY_DATA } from "../constants/sales-summary";
 
 export default function HomePage() {
@@ -16,17 +19,18 @@ export default function HomePage() {
 
   const handleFeatureBannerButtonClick = () => {
     console.log("Feature banner button clicked");
-    // TODO: Navigate to the customers list page.
   };
 
   const handleCarrierButtonClick = () => {
     console.log("Carrier button clicked");
-    // TODO: Navigate to the carriers list page.
   };
 
-  const handleLeadButtonClick = () => {
-    console.log("Lead button clicked");
-    // TODO: Navigate to the leads list page.
+  const handleSalesSummaryButtonClick = () => {
+    console.log("Sales summary button clicked");
+  };
+
+  const handleSecondaryFeatureButtonClick = () => {
+    console.log("Secondary feature button clicked");
   };
 
   return (
@@ -58,7 +62,7 @@ export default function HomePage() {
               title="Sales Summary"
               description="Here is a summary of your three most recent sales."
               buttonText="View all sales"
-              onClick={handleLeadButtonClick}
+              onClick={handleSalesSummaryButtonClick}
             />
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -74,6 +78,12 @@ export default function HomePage() {
               />
             ))}
           </div>
+        </div>
+        <div className="mb-14 mt-14">
+          <CometFeaturesBanner
+            {...HOME_PAGE_SECONDARY_FEATURES_BANNER_DATA}
+            onClick={handleSecondaryFeatureButtonClick}
+          />
         </div>
       </div>
     </>

@@ -1,3 +1,5 @@
+import "./CometSummary.css";
+
 interface CometSummaryProps {
   iconType?: string;
   icon?: string;
@@ -17,7 +19,6 @@ export type DownloadData = {
 };
 
 export default function CometSummary(props: CometSummaryProps) {
-  console.log("🚀 ~ CometSummary ~ props:", props);
   return (
     <div>
       <comet-summary
