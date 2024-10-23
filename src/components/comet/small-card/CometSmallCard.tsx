@@ -10,7 +10,6 @@ export default function CometSmallCard({
   children,
   title,
   description,
-  logo,
   className,
 }: CometSmallCardProps) {
   return (

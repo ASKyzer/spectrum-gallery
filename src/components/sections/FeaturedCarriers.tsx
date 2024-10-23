@@ -10,10 +10,6 @@ type Carrier = {
 };
 
 export default function FeaturedCarriers() {
-  const handleButtonClick = () => {
-    console.log("See all carriers button clicked");
-  };
-
   const handleCarrierClick = () => {
     console.log("Carrier clicked");
   };
