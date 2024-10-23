@@ -1,3 +1,4 @@
+import "@frigi/comet/dist/comet.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
