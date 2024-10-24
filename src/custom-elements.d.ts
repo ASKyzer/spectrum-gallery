@@ -8,5 +8,14 @@ declare namespace JSX {
       React.HTMLAttributes<HTMLElement> & { [key: string]: unknown },
       HTMLElement
     >;
+    "comet-feedback-message": React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLElement>,
+      HTMLElement
+    > & {
+      theme?: string;
+      title?: string;
+      primaryButtonText?: string;
+      secondaryButtonText?: string;
+    };
   }
 }
