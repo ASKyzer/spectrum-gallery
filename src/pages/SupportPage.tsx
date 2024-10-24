@@ -113,14 +113,26 @@ export default function SupportPage() {
           >
             <div slot="error-message">Email is required</div>
           </vaadin-text-field>
-          <vaadin-number-field
-            label="Phone number"
-            required
-            class="w-full"
-            ref={(el) => (inputFieldRef.current.phone = el as InputElement)}
-          >
-            <div slot="error-message">Phone number is required</div>
-          </vaadin-number-field>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <vaadin-text-field
+              label="Country code"
+              class="w-full"
+              required
+              ref={(el) =>
+                (inputFieldRef.current.countryCode = el as InputElement)
+              }
+            >
+              <div slot="error-message">Country code is required</div>
+            </vaadin-text-field>
+            <vaadin-number-field
+              label="Phone number"
+              required
+              class="w-full md:col-span-3"
+              ref={(el) => (inputFieldRef.current.phone = el as InputElement)}
+            >
+              <div slot="error-message">Phone number is required</div>
+            </vaadin-number-field>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <vaadin-text-field
               label="Street"
