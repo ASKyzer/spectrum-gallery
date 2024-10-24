@@ -12,25 +12,25 @@ export type CometCardProps = {
 export type ButtonConfig = {
   disabled?: boolean;
   label?: string;
-  size?: "small" | "large";
+  size?: 'small' | 'large';
   theme:
-    | "comet"
-    | "danger"
-    | "default"
-    | "info"
-    | "link"
-    | "primary"
-    | "primary-inverted"
-    | "subtle"
-    | "success"
-    | "warning";
+    | 'comet'
+    | 'danger'
+    | 'default'
+    | 'info'
+    | 'link'
+    | 'primary'
+    | 'primary-inverted'
+    | 'subtle'
+    | 'success'
+    | 'warning';
   icon?: ButtonIcon;
   onClick?: () => void;
 };
 
 export type ButtonIcon = {
   name: string;
-  position: "prefix" | "suffix";
+  position: 'prefix' | 'suffix';
 };
 
 export const CometCard = ({

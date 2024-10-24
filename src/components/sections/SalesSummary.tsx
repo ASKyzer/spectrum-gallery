@@ -1,4 +1,4 @@
-import CometSummary, { CometSummaryData } from "../comet/summary/CometSummary";
+import CometSummary, { CometSummaryData } from '../comet/summary/CometSummary';
 
 export interface SalesSummaryProps {
   iconType: string;

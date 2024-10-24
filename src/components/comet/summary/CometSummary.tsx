@@ -1,4 +1,4 @@
-import "./CometSummary.css";
+import './CometSummary.css';
 
 interface CometSummaryProps {
   iconType?: string;

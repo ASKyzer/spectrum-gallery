@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import "./CometFeaturesBanner.css";
+import { useEffect, useRef } from 'react';
+import './CometFeaturesBanner.css';
 
 export type CometFeaturesBannerProps = {
   theme?: string;
@@ -11,7 +11,7 @@ export type CometFeaturesBannerProps = {
 };
 
 export default function CometFeaturesBanner({
-  theme = "primary",
+  theme = 'primary',
   title,
   description,
   buttonLabel,
@@ -27,14 +27,14 @@ export default function CometFeaturesBanner({
   useEffect(() => {
     const cometFeaturesBanner = cometFeaturesBannerRef.current;
 
-    cometFeaturesBanner?.addEventListener("button-click", handleButtonClick);
+    cometFeaturesBanner?.addEventListener('button-click', handleButtonClick);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="CometFeaturesBanner">
+    <div className='CometFeaturesBanner'>
       <comet-features-banner
-        className="CometFeaturesBanner"
+        className='CometFeaturesBanner'
         theme={theme}
         title={title}
         description={description}

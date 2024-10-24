@@ -12,7 +12,7 @@ export default function CometButton({
   leadingIcon,
   trailingIcon,
   iconTheme,
-  size = "medium",
+  size = 'medium',
   onClick,
 }: CometButtonProps) {
   return (
