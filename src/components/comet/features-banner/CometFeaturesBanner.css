@@ -1,0 +1,7 @@
+comet-features-banner::part(comet-features-banner-title) {
+  font-family: "Kyn", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+comet-features-banner::part(comet-features-banner-description) {
+  font-family: "Kyn", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,14 @@
+.title {
+  color: var(--primary-80);
+  font-family: "Kyn", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: var(--primary-80);
+  font-family: "Kyn", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
