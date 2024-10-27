@@ -25,20 +25,13 @@ export default function SupportPage() {
   }, []);
 
   useEffect(() => {
-    const selectElement = inputFieldRef.current
-      .contactMethod as HTMLElement | null;
+    const selectElement = inputFieldRef.current.contactMethod as HTMLElement | null;
     if (selectElement) {
-      selectElement.addEventListener(
-        'select-change',
-        handleSelectChange as EventListener
-      );
+      selectElement.addEventListener('select-change', handleSelectChange as EventListener);
     }
     return () => {
       if (selectElement) {
-        selectElement.removeEventListener(
-          'select-change',
-          handleSelectChange as EventListener
-        );
+        selectElement.removeEventListener('select-change', handleSelectChange as EventListener);
       }
     };
   }, [handleSelectChange]);
@@ -63,10 +56,7 @@ export default function SupportPage() {
 
     if (isValid) {
       console.log('Form is valid and submitted');
-      console.log(
-        '🚀 ~ handleSubmit ~ formData:',
-        Object.fromEntries(formData)
-      );
+      console.log('🚀 ~ handleSubmit ~ formData:', Object.fromEntries(formData));
 
       resetForm();
     } else {
@@ -93,15 +83,13 @@ export default function SupportPage() {
         />
       </div>
       <form>
-        <div className='w-full space-y-4 bg-white p-4 rounded-lg'>
+        <div className='w-full space-y-1 bg-white p-4 rounded-lg shadow-md mb-10'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <vaadin-text-field
               label='First name'
               required
               class='w-full'
-              ref={(el) =>
-                (inputFieldRef.current.firstName = el as InputElement)
-              }
+              ref={(el) => (inputFieldRef.current.firstName = el as InputElement)}
             >
               <div slot='error-message'>First name is required</div>
             </vaadin-text-field>
@@ -109,9 +97,7 @@ export default function SupportPage() {
               label='Last name'
               required
               class='w-full'
-              ref={(el) =>
-                (inputFieldRef.current.lastName = el as InputElement)
-              }
+              ref={(el) => (inputFieldRef.current.lastName = el as InputElement)}
             >
               <div slot='error-message'>Last name is required</div>
             </vaadin-text-field>
@@ -130,9 +116,7 @@ export default function SupportPage() {
               label='Country code'
               class='w-full'
               required
-              ref={(el) =>
-                (inputFieldRef.current.countryCode = el as InputElement)
-              }
+              ref={(el) => (inputFieldRef.current.countryCode = el as InputElement)}
             >
               <div slot='error-message'>Country code is required</div>
             </vaadin-text-field>
@@ -158,9 +142,7 @@ export default function SupportPage() {
               label='House number'
               class='w-full'
               required
-              ref={(el) =>
-                (inputFieldRef.current.houseNumber = el as InputElement)
-              }
+              ref={(el) => (inputFieldRef.current.houseNumber = el as InputElement)}
             >
               <div slot='error-message'>House number is required</div>
             </vaadin-text-field>
@@ -170,9 +152,7 @@ export default function SupportPage() {
               label='Postal code'
               class='w-full'
               required
-              ref={(el) =>
-                (inputFieldRef.current.postalCode = el as InputElement)
-              }
+              ref={(el) => (inputFieldRef.current.postalCode = el as InputElement)}
             >
               <div slot='error-message'>Postal code is required</div>
             </vaadin-number-field>
@@ -191,9 +171,7 @@ export default function SupportPage() {
               label='How do you want to be contacted?'
               name='contactMethod'
               required
-              ref={(el) =>
-                (inputFieldRef.current.contactMethod = el as InputElement)
-              }
+              ref={(el) => (inputFieldRef.current.contactMethod = el as InputElement)}
             >
               <div slot='error-message'>Contact method is required</div>
             </comet-select>
@@ -201,7 +179,7 @@ export default function SupportPage() {
           <vaadin-text-area
             label='Message'
             required
-            class='w-full'
+            class='w-full min-h-[200px]'
             ref={(el) => (inputFieldRef.current.message = el as InputElement)}
           >
             <div slot='error-message'>Message is required</div>
@@ -209,9 +187,7 @@ export default function SupportPage() {
           <vaadin-text-field
             label='Contract number (if applicable)'
             class='w-full'
-            ref={(el) =>
-              (inputFieldRef.current.contractNumber = el as InputElement)
-            }
+            ref={(el) => (inputFieldRef.current.contractNumber = el as InputElement)}
           >
             <div slot='error-message'>Contract number is required</div>
           </vaadin-text-field>
