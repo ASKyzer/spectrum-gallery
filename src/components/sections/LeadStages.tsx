@@ -38,5 +38,5 @@ export default function LeadStagesSection() {
       icon: 'car',
     },
   ];
-  return <CometStages stages={JSON.stringify(stages)} />;
+  return <CometStages stages={stages} />;
 }
