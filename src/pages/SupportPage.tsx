@@ -198,6 +198,14 @@ export default function SupportPage() {
               <div slot='error-message'>Contact method is required</div>
             </comet-select>
           </div>
+          <vaadin-text-area
+            label='Message'
+            required
+            class='w-full'
+            ref={(el) => (inputFieldRef.current.message = el as InputElement)}
+          >
+            <div slot='error-message'>Message is required</div>
+          </vaadin-text-area>
           <vaadin-text-field
             label='Contract number (if applicable)'
             class='w-full'
