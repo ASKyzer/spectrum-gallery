@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import CometFeaturesBanner from '../components/comet/features-banner/CometFeaturesBanner';
 import DashboardSectionTitle from '../components/common/DashboardSectionTitle';
 import FeaturedCarriers from '../components/sections/FeaturedCarriers';
+import LeadStages from '../components/sections/LeadStages';
 import SalesSummary from '../components/sections/SalesSummary';
 import PageHeader from '../components/ui/PageHeader';
 import {
@@ -16,19 +17,26 @@ export default function HomePage() {
 
   const handleFeatureBannerButtonClick = () => {
     console.log('Feature banner button clicked');
+    // TODO: Implement customers list page and navigate to it
   };
 
   const handleCarrierButtonClick = () => {
     console.log('Carrier button clicked');
+    // TODO: Implement carrier page and navigate to it
   };
 
   const handleSalesSummaryButtonClick = () => {
     console.log('Sales summary button clicked');
+    // TODO: Implement sales summary page
   };
 
   const handleSecondaryFeatureButtonClick = () => {
     navigate('/support');
   };
+
+  function handleLeadsButtonClick(): void {
+    // TODO: Implement leads page
+  }
 
   return (
     <>
@@ -53,7 +61,18 @@ export default function HomePage() {
           </div>
           <FeaturedCarriers />
         </div>
-        <div className='mb-12'>
+        <div className='mb-14'>
+          <div className='mb-4'>
+            <DashboardSectionTitle
+              title='Lead Stages'
+              description='Here is a summary of your three most recent contact with a lead.'
+              buttonText='View all leads'
+              onClick={handleLeadsButtonClick}
+            />
+          </div>
+          <LeadStages />
+        </div>
+        <div className='mb-14'>
           <div className='mb-4'>
             <DashboardSectionTitle
               title='Sales Summary'
@@ -62,18 +81,20 @@ export default function HomePage() {
               onClick={handleSalesSummaryButtonClick}
             />
           </div>
-          <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
-            {SALES_SUMMARY_DATA.map((sale, index) => (
-              <SalesSummary
-                key={index}
-                iconType={sale.iconType}
-                icon={sale.icon}
-                title={sale.title}
-                totalLabel={sale.totalLabel}
-                total={sale.total}
-                data={sale.data}
-              />
-            ))}
+          <div className='mb-4'>
+            <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
+              {SALES_SUMMARY_DATA.map((sale, index) => (
+                <SalesSummary
+                  key={index}
+                  iconType={sale.iconType}
+                  icon={sale.icon}
+                  title={sale.title}
+                  totalLabel={sale.totalLabel}
+                  total={sale.total}
+                  data={sale.data}
+                />
+              ))}
+            </div>
           </div>
         </div>
         <div className='mb-14 mt-14'>
