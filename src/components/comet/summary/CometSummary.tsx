@@ -1,4 +1,4 @@
-import "./CometSummary.css";
+import './CometSummary.css';
 
 interface CometSummaryProps {
   iconType?: string;
@@ -9,7 +9,15 @@ interface CometSummaryProps {
   data?: CometSummaryData;
 }
 
-export type CometSummaryData = { lines: string[]; downloadData?: DownloadData };
+export type CometSummaryLine = {
+  label: string;
+  value: string | number;
+};
+
+export type CometSummaryData = {
+  lines: CometSummaryLine[];
+  downloadData?: DownloadData;
+};
 
 export type DownloadData = {
   title: string;
