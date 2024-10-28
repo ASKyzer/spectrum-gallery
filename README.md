@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Comet Design System Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates the implementation and usage of the Comet Design System components library in a React application. It serves two main purposes:
 
-Currently, two official plugins are available:
+1. Testing the Comet Design System library locally using the .tgz package
+2. Showcasing different implementation approaches for Comet components:
+   - Wrapping Comet components in React components (demonstrated in the homepage dashboard)
+   - Direct usage of Comet components (shown in the support page form)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To learn more about Comet Design System, please see and clone the [Comet Design System repository](https://github.com/ASKyzer/comet-design)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (v18 or higher)
+- npm or yarn
+- Local build of Comet Design System (see [Comet Design System repository](https://github.com/ASKyzer/comet-design) for instructions)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ASKyzer/spectrum-gallery.git
+cd spectrum-gallery
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+npm install
+# or
+yarn install
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+3. Start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## Important Note About Assets
+
+⚠️ **Required Step**: After installation, you need to copy the following assets from the Comet Design System package to this project:
+
+1. Create the assets directory and copy all files:
+
+```bash
+mkdir -p src/assets
+cp node_modules/@frigi/comet/dist/assets/Kyn-Bold.woff2 src/assets/
+cp node_modules/@frigi/comet/dist/assets/Kyn-Regular.woff2 src/assets/
+cp node_modules/@frigi/comet/dist/assets/ui.svg src/assets/
+cp node_modules/@frigi/comet/dist/assets/wecons-helix.svg src/assets/
+cp node_modules/@frigi/comet/dist/assets/wecons-circle.svg src/assets/
+```
+
+These assets are required for proper rendering of fonts and icons in the application. The files should be placed in the following structure:
+
+```
+src/
+  assets/
+    Kyn-Bold.woff2
+    Kyn-Regular.woff2
+    ui.svg
+    wecons-helix.svg
+    wecons-circle.svg
 ```
