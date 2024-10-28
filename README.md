@@ -15,6 +15,7 @@ To learn more about Comet Design System, please see and clone the [Comet Design 
 
 - Node.js (v18 or higher)
 - npm or yarn
+- Local build of Comet Design System (see [Comet Design System repository](https://github.com/ASKyzer/comet-design) for instructions)
 
 ### Installation
 
