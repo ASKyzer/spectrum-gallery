@@ -1,8 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
 
-export default function NavBar() {
+interface NavBarProps {
+  className?: string;
+}
+
+export default function NavBar({ className }: NavBarProps) {
   return (
-    <div className='flex justify-between items-center h-16 px-4 bg-white border-b border-[--neutral-40] shadow-sm'>
+    <div
+      className={`flex justify-between items-center h-16 px-4 bg-white border-b border-[--neutral-40] shadow-sm ${className}`}
+    >
       <h1 className='text-3xl font-bold text-[--secondary-90]'>
         <Link to='/'>InsureGuard</Link>
       </h1>
@@ -12,9 +18,7 @@ export default function NavBar() {
             <NavLink
               to='/'
               className={({ isActive }) =>
-                `hover:text-[--primary-50] ${
-                  isActive ? 'text-[--primary-50]' : 'text-[--primary-80]'
-                }`
+                `hover:text-[--primary-50] ${isActive ? 'text-[--primary-50]' : 'text-[--primary-80]'}`
               }
             >
               Home
@@ -24,9 +28,7 @@ export default function NavBar() {
             <NavLink
               to='/support'
               className={({ isActive }) =>
-                `hover:text-[--primary-50] ${
-                  isActive ? 'text-[--primary-50]' : 'text-[--primary-80]'
-                }`
+                `hover:text-[--primary-50] ${isActive ? 'text-[--primary-50]' : 'text-[--primary-80]'}`
               }
             >
               Support
