@@ -43,3 +43,30 @@ yarn dev
 ```
 
 The application will be available at `http://localhost:5173`
+
+## Important Note About Assets
+
+⚠️ **Required Step**: After installation, you need to copy the following assets from the Comet Design System package to this project:
+
+1. Create the assets directory and copy all files:
+
+```bash
+mkdir -p src/assets
+cp node_modules/@frigi/comet/dist/assets/Kyn-Bold.woff2 src/assets/
+cp node_modules/@frigi/comet/dist/assets/Kyn-Regular.woff2 src/assets/
+cp node_modules/@frigi/comet/dist/assets/ui.svg src/assets/
+cp node_modules/@frigi/comet/dist/assets/wecons-helix.svg src/assets/
+cp node_modules/@frigi/comet/dist/assets/wecons-circle.svg src/assets/
+```
+
+These assets are required for proper rendering of fonts and icons in the application. The files should be placed in the following structure:
+
+```
+src/
+  assets/
+    Kyn-Bold.woff2
+    Kyn-Regular.woff2
+    ui.svg
+    wecons-helix.svg
+    wecons-circle.svg
+```
